@@ -1,6 +1,6 @@
 
 # Springboot + TailwindCSS v4 template
-This is a starter temaplete for springboot applications with tailwind v4.
+This is a starter temaplete for springboot applications with tailwind v4 so you can use any template engine like Thymeleaf with the tailwind v4 css style classes.
 
 
 ## Prerequisites
