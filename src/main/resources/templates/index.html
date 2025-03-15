@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spring Boot + Tailwind</title>
+    <link rel="stylesheet" th:href="@{/css/style.build.tailwind.css}" />
+  </head>
+
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2">
+          <span class="font-bold text-xl">Spring + Tailwind</span>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#getting-started"
+            class="hover:text-primary-600 transition-colors"
+            >Getting Started</a
+          >
+          <a href="#" class="text-black hover:text-gray-400 transition-colors">
+            <span class="sr-only">GitHub</span>
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </nav>
+        <div class="md:hidden">
+          <button class="p-2 focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-green-500 to-blue-500 from-primary-600 to-primary-700 text-white py-20"
+    >
+      <div class="container mx-auto px-4 items-center md:w-3/5">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+          <div class="md:w-4/5 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              Spring Boot + Tailwind CSS
+            </h1>
+            <p class="text-xl mb-8">
+              A template for building Java web applications with Spring Boot and
+              Tailwind CSS.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+              <a
+                href="#getting-started"
+                class="bg-white text-green-700 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg shadow-md transition-colors text-center"
+                >Get Started</a
+              >
+              <a
+                href="#"
+                class="bg-green-800 hover:bg-green-900 font-semibold py-3 px-6 rounded-lg shadow-md transition-colors text-center"
+                >View on GitHub</a
+              >
+            </div>
+          </div>
+          <div class="md:w-1/5">
+            <div class="bg-white p-4 rounded-lg shadow-lg md:w-fit">
+              <pre
+                class="bg-gray-800 text-gray-100 p-4 rounded text-sm overflow-x-auto"
+              >
+  <code>@Controller
+  public class HomeController {
+  
+      @GetMapping("/")
+      public String home(Model model) {
+          model.addAttribute("message", "Welcome to SpringTail!");
+          return "index";
+      }
+  }</code>
+                          </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Code Section -->
+    <section id="code" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 items-center md:w-1/2">
+        <h2 class="text-3xl font-bold text-center mb-12">Clean, modern Code</h2>
+        <div class="grid grid-cols-1 gap-8">
+          <!-- Tailwind HTML -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">
+              Tailwind +Thymeleaf HTML Template
+            </h3>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+              <pre
+                class="bg-gray-800 text-gray-100 p-4 rounded text-sm overflow-x-auto"
+              >
+  <code>&lt;!DOCTYPE html&gt;
+  &lt;html xmlns:th="http://www.thymeleaf.org"&gt;
+  &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+      &lt;title&gt;Spring + Tailwind App&lt;/title&gt;
+      &lt;link rel="stylesheet" th:href="@{/css/style.build.tailwind.css}"&gt;
+  &lt;/head&gt;
+  &lt;body class="bg-gray-50"&gt;
+      &lt;header class="bg-white shadow"&gt;
+          &lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"&gt;
+              &lt;h1 class="text-3xl font-bold text-gray-900"&gt;
+                  &lt;span&gt;Welcome&lt;/span&gt;
+              &lt;/h1&gt;
+          &lt;/div&gt;
+      &lt;/header&gt;
+      &lt;main&gt;
+          &lt;div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8"&gt;
+              &lt;!-- Your content here --&gt;
+              &lt;div class="px-4 py-6 sm:px-0"&gt;
+                  &lt;div class="border-4 border-dashed border-gray-200 rounded-lg h-96"&gt;
+                      &lt;!-- Content goes here --&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/main&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</code>
+                          </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section id="getting-started" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Getting Started</h2>
+        <div class="max-w-3xl mx-auto">
+          <div class="space-y-8">
+            <!-- Step 1 -->
+            <div class="flex">
+              <div class="flex-shrink-0"></div>
+              <div class="ml-4">
+                <h3 class="text-xl font-semibold mb-2">Clone the Repository</h3>
+                <div class="bg-gray-100 p-3 rounded">
+                  <code class="text-sm"
+                    >git clone
+                    https://github.com/jorgegonzalezpiedra/springboot-tailwind-starter.git</code
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex">
+              <div class="flex-shrink-0"></div>
+              <div class="ml-4">
+                <h3 class="text-xl font-semibold mb-2">Install Dependencies</h3>
+                <div class="bg-gray-100 p-3 rounded">
+                  <code class="text-sm">./mvnw clean install</code>
+                </div>
+                <p class="mt-2 text-gray-600">
+                  This will install all the required Maven dependencies for
+                  Spring Boot.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex">
+              <div class="flex-shrink-0"></div>
+              <div class="ml-4">
+                <h3 class="text-xl font-semibold mb-2">Set Up Tailwind CSS</h3>
+                <div class="bg-gray-100 p-3 rounded">
+                  <code class="text-sm">npm install<br />npm run watch</code>
+                </div>
+                <p class="mt-2 text-gray-600">
+                  This will install Tailwind CSS and build your stylesheet.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex">
+              <div class="flex-shrink-0"></div>
+              <div class="ml-4">
+                <h3 class="text-xl font-semibold mb-2">Run the Application</h3>
+                <div class="bg-gray-100 p-3 rounded">
+                  <code class="text-sm">./mvnw spring-boot:run</code>
+                </div>
+                <p class="mt-2 text-gray-600">
+                  Your application will be available at
+                  <a
+                    href="http://localhost:8082"
+                    class="text-primary-600 hover:underline"
+                    >http://localhost:8082</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="documentation" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Project Structure</h2>
+        <div
+          class="max-w-4xl mx-auto bg-gray-900 rounded-lg shadow-lg p-6 text-gray-300 font-mono text-sm"
+        >
+          <pre class="overflow-x-auto">
+├── .mvn
+├── node_modules
+├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── example
+│       │           └── controller
+│       │           │    └── Index.java
+│       │           └── SpringBootTailwindStarterApplication.java
+│       └── resources
+│           ├── static
+│           │   └── css
+|           |       └── style.tailwind.css
+│           |       └── style.build.tailwind.css
+│           └── templates
+│           |   ├── index.html
+│           ├── application.properties
+│           └── banner.txt
+├── test
+├── target
+├── .gitattributes
+├── .gitignore
+├── readme.md
+├── mvnw
+├── mvnw.cmd
+├── package-lock.json
+├── package.json
+└── pom.xml</pre
+          >
+          <div class="mt-6 text-sm text-gray-400">
+            <p class="mb-2">
+              <span class="text-primary-400">src/main/java:</span> Java source
+              files including controllers and main application
+            </p>
+            <p class="mb-2">
+              <span class="text-primary-400">src/main/resources/static:</span>
+              Static assets
+            </p>
+            <p class="mb-2">
+              <span class="text-primary-400"
+                >src/main/resources/static/css:</span
+              >
+              Static CSS files. This folder must contains a simple style.tailwind.css with `@import
+              "tailwindcss"` and style.tailwind.build.css wich is the builded
+              css generated for tailwind after scanning your classes
+            </p>
+            <p class="mb-2">
+              <span class="text-primary-400"
+                >src/main/resources/templates:</span
+              >
+              Thymeleaf template files
+            </p>
+            <p class="mb-2">
+              <span class="text-primary-400"
+                >src/main/resources/application.properties:</span
+              >
+              Application configuration
+            </p>
+            <p class="mb-2">
+              <span class="text-primary-400">package.json:</span> Node.js
+              dependencies
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-20 bg-gradient-to-r from-blue-500 to-green-500 text-white"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+          Start building your next Java web application with Spring Boot and
+          Tailwind CSS today.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
+        >
+          <a
+            href="#"
+            class="bg-white text-green-700 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg shadow-md transition-colors"
+            >Download Template</a
+          >
+          <a
+            href="#"
+            class="bg-green-800 hover:bg-green-900 font-semibold py-3 px-8 rounded-lg shadow-md transition-colors"
+            >View Documentation</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1">
+          <div class="text-center">
+            <h3 class="text-white text-lg font-semibold mb-4">
+              SpringBoot + Tailwind
+            </h3>
+            <p class="mb-4">
+              A modern template for Spring Boot and Tailwind CSS applications.
+            </p>
+            <div class="flex space-x-4 items-center justify-center">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <span class="sr-only">GitHub</span>
+                <svg
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
+          <p>&copy; 2025 SpringTail Template. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-50">
+      <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white rounded-lg w-full max-w-sm p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="text-lg font-medium">Menu</h3>
+            <button class="text-gray-400 hover:text-gray-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <nav class="space-y-4">
+            <a
+              href="#features"
+              class="block py-2 px-4 rounded hover:bg-gray-100"
+              >Features</a
+            >
+            <a href="#code" class="block py-2 px-4 rounded hover:bg-gray-100"
+              >Code</a
+            >
+            <a
+              href="#getting-started"
+              class="block py-2 px-4 rounded hover:bg-gray-100"
+              >Getting Started</a
+            >
+            <a
+              href="#documentation"
+              class="block py-2 px-4 rounded hover:bg-gray-100"
+              >Docs</a
+            >
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Simple JavaScript for mobile menu toggle -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector("button.p-2");
+        const mobileMenu = document.querySelector(".hidden.fixed");
+        const closeButton = mobileMenu.querySelector("button");
+
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.remove("hidden");
+        });
+
+        closeButton.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
